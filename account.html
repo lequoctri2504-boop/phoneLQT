@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản - PhoneShop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="header-top-content">
+                    <div class="header-left">
+                        <a href="tel:1800xxxx"><i class="fas fa-phone"></i> 1800.xxxx</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Tìm cửa hàng</a>
+                    </div>
+                    <div class="header-right">
+                        <a href="#" class="user-logged">
+                            <i class="fas fa-user-circle"></i> Nguyễn Văn A
+                        </a>
+                        <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="header-main">
+            <div class="container">
+                <div class="header-main-content">
+                    <div class="logo">
+                        <a href="index.html">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Phone<strong>Shop</strong></span>
+                        </a>
+                    </div>
+                    
+                    <div class="search-box">
+                        <input type="text" placeholder="Tìm kiếm điện thoại, phụ kiện...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="header-actions">
+                        <a href="#" class="wishlist-btn">
+                            <i class="far fa-heart"></i>
+                            <span class="badge">5</span>
+                        </a>
+                        <a href="cart.html" class="cart-btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="badge">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <nav class="navbar">
+            <div class="container">
+                <ul class="nav-menu">
+                    <li><a href="#"><i class="fas fa-mobile-alt"></i> Điện thoại</a></li>
+                    <li><a href="#"><i class="fas fa-laptop"></i> Laptop</a></li>
+                    <li><a href="#"><i class="fas fa-tablet-alt"></i> Tablet</a></li>
+                    <li><a href="#"><i class="fas fa-headphones"></i> Phụ kiện</a></li>
+                    <li><a href="#"><i class="fas fa-clock"></i> Đồng hồ</a></li>
+                    <li class="hot"><a href="#"><i class="fas fa-fire"></i> Khuyến mãi</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Trang chủ</a>
+            <i class="fas fa-chevron-right"></i>
+            <span>Tài khoản</span>
+        </div>
+    </div>
+
+    <!-- Account Page -->
+    <section class="account-page">
+        <div class="container">
+            <div class="account-layout">
+                <!-- Sidebar Menu -->
+                <aside class="account-sidebar">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <h3>Nguyễn Văn A</h3>
+                        <p>nguyenvana@email.com</p>
+                    </div>
+                    <nav class="account-menu">
+                        <a href="#" class="menu-item active" data-section="profile">
+                            <i class="fas fa-user"></i> Thông tin cá nhân
+                        </a>
+                        <a href="#" class="menu-item" data-section="orders">
+                            <i class="fas fa-shopping-bag"></i> Đơn hàng của tôi
+                        </a>
+                        <a href="#" class="menu-item" data-section="wishlist">
+                            <i class="fas fa-heart"></i> Sản phẩm yêu thích
+                        </a>
+                        <a href="#" class="menu-item" data-section="reviews">
+                            <i class="fas fa-star"></i> Đánh giá của tôi
+                        </a>
+                        <a href="#" class="menu-item" data-section="addresses">
+                            <i class="fas fa-map-marker-alt"></i> Địa chỉ giao hàng
+                        </a>
+                        <a href="#" class="menu-item" data-section="password">
+                            <i class="fas fa-lock"></i> Đổi mật khẩu
+                        </a>
+                        <a href="#" class="menu-item" data-section="notifications">
+                            <i class="fas fa-bell"></i> Thông báo
+                        </a>
+                    </nav>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="account-content">
+                    <!-- Profile Section -->
+                    <div class="content-section active" id="profile">
+                        <h2><i class="fas fa-user"></i> Thông tin cá nhân</h2>
+                        <form class="profile-form">
+                            <div class="form-group">
+                                <label>Họ và tên</label>
+                                <input type="text" class="form-control" value="Nguyễn Văn A">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Số điện thoại</label>
+                                    <input type="tel" class="form-control" value="0987654321">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" value="nguyenvana@email.com">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Giới tính</label>
+                                    <select class="form-control">
+                                        <option>Nam</option>
+                                        <option>Nữ</option>
+                                        <option>Khác</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Ngày sinh</label>
+                                    <input type="date" class="form-control" value="1990-01-01">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Cập nhật thông tin</button>
+                        </form>
+                    </div>
+
+                    <!-- Orders Section -->
+                    <div class="content-section" id="orders">
+                        <h2><i class="fas fa-shopping-bag"></i> Đơn hàng của tôi</h2>
+                        
+                        <div class="order-tabs">
+                            <button class="order-tab active">Tất cả</button>
+                            <button class="order-tab">Đang xử lý</button>
+                            <button class="order-tab">Đang giao</button>
+                            <button class="order-tab">Hoàn thành</button>
+                            <button class="order-tab">Đã hủy</button>
+                        </div>
+
+                        <div class="orders-list">
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">
+                                        <strong>Đơn hàng #DH123456</strong>
+                                        <span class="order-date">15/12/2024 10:30</span>
+                                    </div>
+                                    <span class="order-status status-processing">Đang xử lý</span>
+                                </div>
+                                <div class="order-body">
+                                    <div class="order-product">
+                                        <img src="https://images.unsplash.com/photo-1592286927505-128d151c5874?w=80&h=80&fit=crop" alt="Product">
+                                        <div class="order-product-info">
+                                            <h4>iPhone 15 Pro Max 256GB</h4>
+                                            <p>Titan Đen | x1</p>
+                                        </div>
+                                        <div class="order-product-price">28.990.000₫</div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        Tổng tiền: <strong>28.990.000₫</strong>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-secondary btn-sm">Chi tiết</button>
+                                        <button class="btn btn-outline btn-sm">Hủy đơn</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">
+                                        <strong>Đơn hàng #DH123455</strong>
+                                        <span class="order-date">10/12/2024 14:20</span>
+                                    </div>
+                                    <span class="order-status status-delivered">Đã giao</span>
+                                </div>
+                                <div class="order-body">
+                                    <div class="order-product">
+                                        <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=80&h=80&fit=crop" alt="Product">
+                                        <div class="order-product-info">
+                                            <h4>Samsung Galaxy S24 Ultra 12GB</h4>
+                                            <p>Titanium Gray | x1</p>
+                                        </div>
+                                        <div class="order-product-price">26.990.000₫</div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        Tổng tiền: <strong>26.990.000₫</strong>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-secondary btn-sm">Chi tiết</button>
+                                        <button class="btn btn-primary btn-sm">Đánh giá</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="order-card">
+                                <div class="order-header">
+                                    <div class="order-id">
+                                        <strong>Đơn hàng #DH123454</strong>
+                                        <span class="order-date">05/12/2024 09:15</span>
+                                    </div>
+                                    <span class="order-status status-shipping">Đang giao</span>
+                                </div>
+                                <div class="order-body">
+                                    <div class="order-product">
+                                        <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=80&h=80&fit=crop" alt="Product">
+                                        <div class="order-product-info">
+                                            <h4>Xiaomi 14 Pro 5G 512GB</h4>
+                                            <p>Titan Black | x1</p>
+                                        </div>
+                                        <div class="order-product-price">19.990.000₫</div>
+                                    </div>
+                                </div>
+                                <div class="order-footer">
+                                    <div class="order-total">
+                                        Tổng tiền: <strong>19.990.000₫</strong>
+                                    </div>
+                                    <div class="order-actions">
+                                        <button class="btn btn-secondary btn-sm">Theo dõi</button>
+                                        <button class="btn btn-outline btn-sm">Liên hệ</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wishlist Section -->
+                    <div class="content-section" id="wishlist">
+                        <h2><i class="fas fa-heart"></i> Sản phẩm yêu thích (5)</h2>
+                        <div class="product-grid">
+                            <div class="product-card">
+                                <div class="product-badge">-15%</div>
+                                <button class="wishlist-remove"><i class="fas fa-times"></i></button>
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1592286927505-128d151c5874?w=300&h=300&fit=crop" alt="iPhone 15">
+                                </div>
+                                <div class="product-info">
+                                    <h3>iPhone 15 Pro Max 256GB</h3>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(234)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price-new">28.990.000₫</span>
+                                        <span class="price-old">33.990.000₫</span>
+                                    </div>
+                                    <button class="btn btn-cart btn-sm"><i class="fas fa-shopping-cart"></i> Thêm vào giỏ</button>
+                                </div>
+                            </div>
+
+                            <div class="product-card">
+                                <button class="wishlist-remove"><i class="fas fa-times"></i></button>
+                                <div class="product-image">
+                                    <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=300&h=300&fit=crop" alt="Samsung">
+                                </div>
+                                <div class="product-info">
+                                    <h3>Samsung Galaxy S24 Ultra</h3>
+                                    <div class="product-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>(189)</span>
+                                    </div>
+                                    <div class="product-price">
+                                        <span class="price-new">26.990.000₫</span>
+                                    </div>
+                                    <button class="btn btn-cart btn-sm"><i class="fas fa-shopping-cart"></i> Thêm vào giỏ</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reviews Section -->
+                    <div class="content-section" id="reviews">
+                        <h2><i class="fas fa-star"></i> Đánh giá của tôi (3)</h2>
+                        <div class="my-reviews-list">
+                            <div class="my-review-card">
+                                <div class="review-product">
+                                    <img src="https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=80&h=80&fit=crop" alt="Product">
+                                    <div>
+                                        <h4>Samsung Galaxy S24 Ultra 12GB</h4>
+                                        <p class="review-date">Đánh giá ngày 11/12/2024</p>
+                                    </div>
+                                </div>
+                                <div class="review-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <p class="review-text">Sản phẩm rất tuyệt vời, camera đẹp, pin trâu, hiệu năng mượt mà. Đóng gói cẩn thận, giao hàng nhanh. Rất hài lòng!</p>
+                                <div class="review-actions">
+                                    <button class="btn btn-outline btn-sm">Chỉnh sửa</button>
+                                    <button class="btn btn-outline btn-sm text-danger">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Addresses Section -->
+                    <div class="content-section" id="addresses">
+                        <h2><i class="fas fa-map-marker-alt"></i> Địa chỉ giao hàng</h2>
+                        <button class="btn btn-primary mb-3"><i class="fas fa-plus"></i> Thêm địa chỉ mới</button>
+                        
+                        <div class="addresses-list">
+                            <div class="address-card">
+                                <div class="address-badge">Mặc định</div>
+                                <div class="address-content">
+                                    <strong>Nguyễn Văn A</strong>
+                                    <p>0987654321</p>
+                                    <p>123 Đường ABC, Phường XYZ, Quận 1, TP. Hồ Chí Minh</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn btn-outline btn-sm">Chỉnh sửa</button>
+                                    <button class="btn btn-outline btn-sm text-danger">Xóa</button>
+                                </div>
+                            </div>
+
+                            <div class="address-card">
+                                <div class="address-content">
+                                    <strong>Nguyễn Văn A (Văn phòng)</strong>
+                                    <p>0987654321</p>
+                                    <p>456 Đường DEF, Phường GHI, Quận 2, TP. Hồ Chí Minh</p>
+                                </div>
+                                <div class="address-actions">
+                                    <button class="btn btn-outline btn-sm">Đặt mặc định</button>
+                                    <button class="btn btn-outline btn-sm">Chỉnh sửa</button>
+                                    <button class="btn btn-outline btn-sm text-danger">Xóa</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Password Section -->
+                    <div class="content-section" id="password">
+                        <h2><i class="fas fa-lock"></i> Đổi mật khẩu</h2>
+                        <form class="password-form">
+                            <div class="form-group">
+                                <label>Mật khẩu hiện tại</label>
+                                <input type="password" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Mật khẩu mới</label>
+                                <input type="password" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Xác nhận mật khẩu mới</label>
+                                <input type="password" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Đổi mật khẩu</button>
+                        </form>
+                    </div>
+
+                    <!-- Notifications Section -->
+                    <div class="content-section" id="notifications">
+                        <h2><i class="fas fa-bell"></i> Thông báo</h2>
+                        <div class="notifications-list">
+                            <div class="notification-item unread">
+                                <div class="notification-icon">
+                                    <i class="fas fa-shipping-fast"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <strong>Đơn hàng #DH123456 đang được giao</strong>
+                                    <p>Đơn hàng của bạn đang trên đường giao. Dự kiến giao trong 2h nữa.</p>
+                                    <span class="notification-time">2 giờ trước</span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon">
+                                    <i class="fas fa-tag"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <strong>Flash Sale iPhone 15 - Giảm đến 20%</strong>
+                                    <p>Khuyến mãi đặc biệt chỉ hôm nay. Nhanh tay đặt hàng!</p>
+                                    <span class="notification-time">1 ngày trước</span>
+                                </div>
+                            </div>
+
+                            <div class="notification-item">
+                                <div class="notification-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="notification-content">
+                                    <strong>Đơn hàng #DH123455 đã giao thành công</strong>
+                                    <p>Cảm ơn bạn đã mua hàng. Đừng quên đánh giá sản phẩm nhé!</p>
+                                    <span class="notification-time">3 ngày trước</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col">
+                    <h4>Về PhoneShop</h4>
+                    <ul>
+                        <li><a href="#">Giới thiệu công ty</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Chính sách</h4>
+                    <ul>
+                        <li><a href="#">Chính sách bảo hành</a></li>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Chính sách vận chuyển</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Hỗ trợ khách hàng</h4>
+                    <ul>
+                        <li><a href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a href="#">Hướng dẫn thanh toán</a></li>
+                        <li><a href="#">Tra cứu đơn hàng</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kết nối với chúng tôi</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PhoneShop. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chat-widget">
+        <button class="chat-toggle">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
